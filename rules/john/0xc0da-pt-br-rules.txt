@@ -1,0 +1,40 @@
+####################################################################
+# 0xc0da Custom Brazilian Portuguse John the Ripper Rules:
+# Based on KoreLogic Custom John the Ripper Rules
+####################################################################
+
+# Use this rule with 2EVERYTHING.dic or 3EVERYTHING.dic
+[List.Rules:0xc0daBRRulesPrependSeasons]
+A0"[Pp][rR][iI1][mM][aA4@][Vv][eE3&][rR][aA4@]"
+A0"[Vv][eE3&][rR][aA4@][oO0]"
+A0"[Oo0][uU][tT7][oO0][nN][oO0]"
+A0"[Ii1][nN][vV][eE3&][rR][nN][oO0]"
+
+# Use this rule with 2EVERYTHING.dic or 3EVERYTHING.dic
+[List.Rules:0xc0daBRRulesAppendSeasons]
+AZ"[Pp][rR][iI1][mM][aA4@][Vv][eE3&][rR][aA4@]"
+AZ"[Vv][eE3&][rR][aA4@][oO0]"
+AZ"[Oo0][uU][tT7][oO0][nN][oO0]"
+AZ"[Ii1][nN][vV][eE3&][rR][nN][oO0]"
+
+[List.Rules:0xc0daBRRulesPrependOla]
+A0"[oO0][lL][aA4@]"
+
+[List.Rules:0xc0daBRRulesMonthsFullPreface]
+#ToDo
+
+[List.Rules:0xc0daBRRulesAddShortMonthsEverywhere]
+#ToDo
+
+[List.Rules:0xc0daBRRulesPrepend4LetterMonths]
+## Preface each dictionary with Janu janu Febr febr
+#ToDo
+
+[List.Rules:0xc0daBRRulesPrependDaysWeek]
+#ToDo
+
+[List.Rules:0xc0daBRRulesAppendMonthDay]
+#ToDo
+
+[List.Rules:0xc0daBRRulesAppendMonthCurrentYear]
+#ToDo
