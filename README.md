@@ -11,7 +11,7 @@ talk on the subject at Co0L BsidesSP v7 - Black Hat Edition (Nov 24th 2013).
 Contents
 ========
 
-* Rules - Rules for Hashcat(http://hashcat.net/oclhashcat-plus/) and John The Ripper(http://www.openwall.com/john/).
+* Rules - Rules for [Hashcat](http://hashcat.net/oclhashcat-plus/) and [John The Ripper](http://www.openwall.com/john/).
 * Scripts - Simple scripts to generate wordlists, keywords and deal with hashes.
 * Wordlists - Useful wordlists in brazilian portuguese.
 
