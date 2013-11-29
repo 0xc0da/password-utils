@@ -5,7 +5,7 @@ Scripts, wordlists, pot files and other useful stuff for password cracking.
 
 Most part of what you will find here is based on my research about password
 cracking techniques applied to brazilian portuguese hashes. I presented a
-talk on the subject at Co0L BsidesSP v7 - Black Hat Edition (Nov 24th 2013).
+talk on the subject at [Co0L BsidesSP v7 - Black Hat Edition])(https://garoa.net.br/wiki/O_Outro_Lado_BSidesSP_ed_7) (Nov 24th 2013).
 
 
 Contents
