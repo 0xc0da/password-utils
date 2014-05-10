@@ -1,7 +1,7 @@
 #!-*- coding: utf8 -*-
 """
  string2rule.py - Generates JtR rules from a string.
- Ver: 0.1 - Nov/2013
+ Ver: 0.2 - May/2014
 
  Author: Daniel Marques (@0xc0da) - daniel _at_ codalabs _dot_ net
  http://codalabs.net
@@ -27,7 +27,7 @@
 
 import sys
 
-substitutions = {
+substitutions = { # Character mapping. Seemed better than use translate().
 	'a': 'aA4@',
 	'b': 'bB8',
 	'c': 'cC',
@@ -53,11 +53,30 @@ substitutions = {
 	'w': 'wW',
 	'x': 'xX',
 	'y': 'yY',
-	'z': 'zZ2'	}
+	'z': 'zZ2',
+	'0': 'oO0',
+	'1': 'iI1!',
+	'2': 'zZ2',
+	'3': 'eE3&',
+	'4': 'aA4@',
+	'5': 'sS5$',
+	'6': '6',
+	'7': 'tT7',
+	'8': 'bB8',
+	'9': 'gG9',
+	'!': 'iI1!',
+	'@': 'aA4@',
+	'#': 'hH#',
+	'$': 'sS5$'	}
 
-print '%s: Generates John the Ripper rules from a string.\n' %(sys.argv[0])
-print 'Just paste this in your JtR config file (usually john.conf):\n'
-print '[List.Rules:%s]' % sys.argv[1]
-print 'A0"%s"' % ''.join(['[%s]' % substitutions[char] for char in sys.argv[1]])
-print 'Az"%s"' % ''.join(['[%s]' % substitutions[char] for char in sys.argv[1]])
-print ''
+print '%s: Generates John the Ripper rules from a string.' % sys.argv[0]
+print 'Created by Daniel C. Marques (@0xc0da) - http://codalabs.net\n'
+
+if len(sys.argv) is not 2: 
+	print "Usage: python %s <string>\n" % sys.argv[0]
+else:
+	print 'Just paste this in your JtR config file (usually john.conf):\n'
+	print '[List.Rules:%s]' % sys.argv[1]
+	print 'A0"%s"' % ''.join(['[%s]' % substitutions[char] for char in sys.argv[1].lower()])
+	print 'Az"%s"' % ''.join(['[%s]' % substitutions[char] for char in sys.argv[1].lower()])
+	print ''
