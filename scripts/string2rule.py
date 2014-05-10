@@ -1,7 +1,7 @@
 #!-*- coding: utf8 -*-
 """
- string-rulegen.py - Generates JtR rules from a string.
- Ver: 0.1 - Nov/2014
+ string2rule.py - Generates JtR rules from a string.
+ Ver: 0.1 - Nov/2013
 
  Author: Daniel Marques (@0xc0da) - daniel _at_ codalabs _dot_ net
  http://codalabs.net
