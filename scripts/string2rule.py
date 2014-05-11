@@ -16,8 +16,11 @@
  If the string codalabs is provided, the expected output is:
 
  [List.Rules:codalabs]
- A0"[cC(][oO0()][dD|)][aA4@][lL1][aA4@][bB8][sS5$]"
- Az"[cC(][oO0()][dD|)][aA4@][lL1][aA4@][bB8][sS5$]"
+ A0"[cC][oO0][dD][aA4@][lL1][aA4@][bB8][sS5$]"
+ Az"[cC][oO0][dD][aA4@][lL1][aA4@][bB8][sS5$]"
+ A0"[cC][oO0][dD][aA4@][lL1][aA4@][bB8][sS5$][_-#@+=^!?*$%~^&()\{}|\[\]\;:,/\<\>`']"
+ Az"[_-#@+=^!?*$%~^&()\{}|\[\]\;:,/\<\>`'][cC][oO0][dD][aA4@][lL1][aA4@][bB8][sS5$]"
+
 
  This program is released as is and is not designed to be used to perform
  test against sites or infraestructures where the user do not have permission.
@@ -27,7 +30,7 @@
 
 import sys
 
-substitutions = { # Character mapping. Seemed better than use translate().
+substitutions = { # Character mapping. Seemed better than translate().
 	'a': 'aA4@',
 	'b': 'bB8',
 	'c': 'cC',
@@ -69,6 +72,8 @@ substitutions = { # Character mapping. Seemed better than use translate().
 	'#': 'hH#',
 	'$': 'sS5$'	}
 
+specials = "_-#@+=^!?*$%~^&()\{}|\[\]\\;:,/\<\>`'" # Ordered from the most used.
+
 print '%s: Generates John the Ripper rules from a string.' % sys.argv[0]
 print 'Created by Daniel C. Marques (@0xc0da) - http://codalabs.net\n'
 
@@ -79,4 +84,7 @@ else:
 	print '[List.Rules:%s]' % sys.argv[1]
 	print 'A0"%s"' % ''.join(['[%s]' % substitutions[char] for char in sys.argv[1].lower()])
 	print 'Az"%s"' % ''.join(['[%s]' % substitutions[char] for char in sys.argv[1].lower()])
+	print 'A0"%s[%s]"' % (specials, ''.join(['[%s]' % substitutions[char] for char in sys.argv[1].lower()]))
+	print 'Az"[%s]%s"' % (specials, ''.join(['[%s]' % substitutions[char] for char in sys.argv[1].lower()]))
+
 	print ''
