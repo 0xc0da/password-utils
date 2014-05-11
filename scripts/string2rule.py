@@ -84,7 +84,7 @@ else:
 	print '[List.Rules:%s]' % sys.argv[1]
 	print 'A0"%s"' % ''.join(['[%s]' % substitutions[char] for char in sys.argv[1].lower()])
 	print 'Az"%s"' % ''.join(['[%s]' % substitutions[char] for char in sys.argv[1].lower()])
-	print 'A0"%s[%s]"' % (specials, ''.join(['[%s]' % substitutions[char] for char in sys.argv[1].lower()]))
+	print 'A0"%s[%s]"' % (''.join(['[%s]' % substitutions[char] for char in sys.argv[1].lower()]), specials)
 	print 'Az"[%s]%s"' % (specials, ''.join(['[%s]' % substitutions[char] for char in sys.argv[1].lower()]))
 
 	print ''
